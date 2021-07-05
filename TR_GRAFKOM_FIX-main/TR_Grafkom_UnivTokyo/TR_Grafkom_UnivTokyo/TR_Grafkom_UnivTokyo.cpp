@@ -6035,6 +6035,36 @@ void papan_tulis()
     glVertex3f(-10.0, 10.0, -76.9);
     glEnd();
 }
+void jam_kelas()
+{
+    //jam kelas
+    glBegin(GL_QUADS);
+    glColor3f(1.000, 0.973, 0.863);
+    glVertex3f(-40, 37, -77.0);
+    glVertex3f(-40, 42, -77.0);
+    glVertex3f(-33, 42, -77.0);
+    glVertex3f(-33, 37, -77.0);
+    glEnd();
+
+    //jarum jam kelas
+    glBegin(GL_LINE_STRIP);
+    glColor3f(0, 0, 0);
+    glVertex3f(-37.5, 39, -76.0);
+    glVertex3f(-37.5, 41, -76.0);
+    glVertex3f(-37.5, 39, -76.0);
+    glVertex3f(-35.5, 39, -76.0);
+    glEnd();
+
+    //garis jam kelas
+    glBegin(GL_LINE_STRIP);
+    glColor3f(0, 0, 0);
+    glVertex3f(-40, 37, -77.0);
+    glVertex3f(-40, 42, -77.0);
+    glVertex3f(-33, 42, -77.0);
+    glVertex3f(-33, 37, -77.0);
+    glVertex3f(-40, 37, -77.0);
+    glEnd();
+}
 void pintu_depan()
 {
 
@@ -6449,6 +6479,7 @@ void display(void)
     meja();
     kursi();
     papan_tulis();
+    jam_kelas();
     pintu_kelas();
     loker();
     pintu_depan();
@@ -6558,7 +6589,7 @@ int main(int argc, char** argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(900, 900);
     glutInitWindowPosition(40, 40);
-    glutCreateWindow("Fungsi Mouse dan Keyboardss");
+    glutCreateWindow("Universitas Tokyo");
     init();
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);
